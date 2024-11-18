@@ -1,19 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Header from 'Header.jsx'
-import './App.css'
+import './App.css';
+import Carousel from './components/Carrousel';
+import Selector from './components/Selector';
+import { carData } from './data/carData';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-  
-    <>
-      <h1>Aca pones tus componentes</h1>
-      
-    </>
-  )
+    <div className="app-container">
+      <h1>Cars Agency</h1>
+      <h2>A continuación, nuestros autos disponibles</h2>
+      <Carousel cars={carData} />
+      <Selector />
+    </div>
+  );
 }
 
-export default App
+export default App;
