@@ -5,27 +5,21 @@ function Selector() {
 
   return (
     <div className="selector">
-      <label>
-        <input
-          type="radio"
-          value="alquiler"
-          checked={option === 'alquiler'}
-          onChange={(e) => setOption(e.target.value)}
-        />
+      <button
+        className={option === 'alquiler' ? 'active' : ''}
+        onClick={() => setOption('alquiler')}
+      >
         Alquiler
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="compra"
-          checked={option === 'compra'}
-          onChange={(e) => setOption(e.target.value)}
-        />
+      </button>
+      <button
+        className={option === 'compra' ? 'active' : ''}
+        onClick={() => setOption('compra')}
+      >
         Compra
-      </label>
+      </button>
       <p>Opción seleccionada: {option}</p>
+      <p>Felicitaciones, has hecho {option} de un auto exitosamente</p>
     </div>
   );
 }
-
 export default Selector;

@@ -9,4 +9,29 @@
     width: 100%;
     height: auto;
   }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+  }
   
+
+  .carousel-btn.prev {
+    left: 10px; /* Ajusta el margen izquierdo */
+  }
+  
+  .carousel-btn.next {
+    right: 10px; /* Ajusta el margen derecho */
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }

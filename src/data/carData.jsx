@@ -1,4 +1,3 @@
-// src/mock/carData.js
 
 export const carData = [
     {
@@ -23,7 +22,8 @@ export const carData = [
       id: 4,
       name: 'Renault Duster',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1G903uNi9bkfKC1Y_qMBx5vk9WrKp2kHJhw&s', 
-      description: 'Catalogada como un SUV robusto con buen rendimiento en terrenos difíciles.',
+      description: 'Catalogada como un SUV robusto (es un tipo de vehículo que combina características de una camioneta con las de un automóvil) con buen rendimiento en terrenos difíciles.',
     },
   ];
+  
   
