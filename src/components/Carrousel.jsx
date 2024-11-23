@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './Carrousel.css';
 
-const Carousel = ({ cars }) => {
+const Carousel = ({ infoCars }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % cars.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % infocars.length);
   };
-
+ // ACA METO LA LOGICA DEL FOR EACH ARREGLO DE ELEMENTO CARROUSEL CON TODOS LOS AUTOS ACA (ELEMENTOS CREADOS A PARTIR DE LA BASE DE DATOS)
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? cars.length - 1 : prevIndex - 1
+      prevIndex === 0 ? infocars.length - 1 : prevIndex - 1
     );
   };
 
@@ -23,12 +23,9 @@ const Carousel = ({ cars }) => {
 
       {/* Contenedor de las imágenes */}
       <div className="carousel-images">
-        <img
-          className="carousel-image"
-          src={cars[currentIndex].image}
-          alt={cars[currentIndex].model}
-        />
-        <p>{cars[currentIndex].description}</p>
+       {}
+      Y LOS BOTONES DE SELECCIONAR,
+      ALQUILAR O COMPRAR ACÁ
       </div>
 
       {/* Botón siguiente */}

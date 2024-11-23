@@ -1,7 +1,7 @@
-/*import axios from 'axios';
-const API_URL = 'http://localhost:3002';  
+import axios from 'axios';
+const API_URL = 'http://localhost:3002/cars';  
 // Crear un carro
-export const createCar = async (carData) => {
+/*export const createCar = async (carData) => {
   try {
     const response = await axios.post(API_URL, carData);
     return response.data;
@@ -9,12 +9,13 @@ export const createCar = async (carData) => {
     console.error("Error creating car", error);
     throw error;
   }
-};
+};*/
 
 // Obtener todos los carros
 export const getCars = async () => {
   try {
     const response = await axios.get(API_URL);
+    console.log("datos obtenidos exitosamente");
     return response.data;
   } catch (error) {
     console.error("Error fetching cars", error);
@@ -23,7 +24,7 @@ export const getCars = async () => {
 };
 
 // Obtener un carro por ID
-export const getCarById = async (id) => {
+/*export const getCarById = async (id) => {
   try {
     const response = await axios.get(`${API_URL}/${id}`);
     return response.data;
@@ -32,9 +33,9 @@ export const getCarById = async (id) => {
     throw error;
   }
 };
-
+*/
 // Actualizar un carro
-export const updateCar = async (id, carData) => {
+/*export const updateCar = async (id, carData) => {
   try {
     const response = await axios.put(`${API_URL}/${id}`, carData);
     return response.data;
@@ -42,10 +43,10 @@ export const updateCar = async (id, carData) => {
     console.error("Error updating car", error);
     throw error;
   }
-};
+};*/
 
 // Eliminar un carro
-export const deleteCar = async (id) => {
+/*export const deleteCar = async (id) => {
   try {
     const response = await axios.delete(`${API_URL}/${id}`);
     return response.data;
