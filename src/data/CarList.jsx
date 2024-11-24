@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getCars} from './CarServices';
+import Carrousel from '../components/Carrousel';
 
 const CarList = () => {
   const [cars, setCars] = useState([]);
@@ -27,9 +28,7 @@ const CarList = () => {
   //};
 
   return (
-   <Carrousel 
-   infoCars={cars}
-   />
+    <Carrousel infoCars={cars}/>
   );
 };
 

@@ -1,39 +1,48 @@
-import React, { useState } from 'react';
-import './Carrousel.css';
 
-const Carousel = ({ infoCars }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % infocars.length);
-  };
- // ACA METO LA LOGICA DEL FOR EACH ARREGLO DE ELEMENTO CARROUSEL CON TODOS LOS AUTOS ACA (ELEMENTOS CREADOS A PARTIR DE LA BASE DE DATOS)
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? infocars.length - 1 : prevIndex - 1
-    );
-  };
-
+const Carrousel = ({ infoCars }) => {
   return (
-    <div className="carousel-container">
-      {/* Botón anterior */}
-      <button className="carousel-btn prev" onClick={prevSlide}>
-        &#10094;
-      </button>
-
-      {/* Contenedor de las imágenes */}
-      <div className="carousel-images">
-       {}
-      Y LOS BOTONES DE SELECCIONAR,
-      ALQUILAR O COMPRAR ACÁ
-      </div>
-
-      {/* Botón siguiente */}
-      <button className="carousel-btn next" onClick={nextSlide}>
-        &#10095;
-      </button>
+    <div>
+      {infoCars.length > i+1 (
+        <div id="carouselExample" className="carousel slide">
+          <div className="carousel-inner">
+            {infoCars.map((car, index) => (
+              <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                <img src={car.imageUrl} alt={`${car.brand} ${car.model}`} />
+                <div className="carousel-caption">
+                  <h5>{`${car.brand} ${car.model} (${car.year})`}</h5>
+                  <p>{car.description}</p>
+                  <p>
+                    Precio: ${car.price} - Estado: {car.status} - Tipo: {car.type}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      ) 
+        (
+        <div>Cargando autos...</div>
+         )}
     </div>
   );
 };
 
-export default Carousel;
+export default Carrousel;
